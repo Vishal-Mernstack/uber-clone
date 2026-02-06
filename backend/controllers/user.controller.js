@@ -21,5 +21,8 @@ const user=await Userservice.createUser({
 });
 
 const token=user.generateAuthToken();
-    
+    res.status(201).json9({
+        token,
+        user
+    })
 }
